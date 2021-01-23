@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.DependencyInjection;
 using System.Linq;
@@ -39,7 +39,7 @@ namespace AspNetCore.ExceptionHandler
             } 
             else
             {
-                var attribute = context.Exception.GetType()
+                var attribute = context.Exception?.GetType()
                     .GetCustomAttributes<StatusCodeAttribute>()
                     .FirstOrDefault();
 
