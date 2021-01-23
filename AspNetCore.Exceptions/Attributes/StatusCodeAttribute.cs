@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace AspNetCore.ExceptionHandler
+namespace AspNetCore.ExceptionHandler.Attributes
 {
     public class StatusCodeAttribute : Attribute
     {
