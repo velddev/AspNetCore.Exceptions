@@ -39,7 +39,7 @@ namespace AspNetCore.ExceptionHandler
             } 
             else
             {
-                var attribute = context.Exception.GetType()
+                var attribute = context.Exception?.GetType()
                     .GetCustomAttributes<StatusCodeAttribute>()
                     .FirstOrDefault();
 
