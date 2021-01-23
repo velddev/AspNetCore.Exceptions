@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.DependencyInjection;
 using System.Linq;
@@ -50,14 +50,13 @@ namespace AspNetCore.ExceptionHandler
             }
 
 
-            if(statusCode != null)
+            if (statusCode == null) return;
+           
+            context.Result = new ObjectResult(message)
             {
-                context.Result = new ObjectResult(message)
-                {
-                    StatusCode = statusCode.Value,
-                };
-                context.ExceptionHandled = true;
-            }
+                StatusCode = statusCode.Value,
+            };
+            context.ExceptionHandled = true;
         }
     }
 }
