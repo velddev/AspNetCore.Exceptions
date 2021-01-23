@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.DependencyInjection;
 using System.Linq;
 using System.Reflection;
+using AspNetCore.ExceptionHandler.Attributes;
 
 namespace AspNetCore.ExceptionHandler
 {
