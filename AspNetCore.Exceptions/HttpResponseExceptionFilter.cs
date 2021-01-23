@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.DependencyInjection;
 using System.Linq;
 using System.Reflection;
+using AspNetCore.ExceptionHandler.Attributes;
 
 namespace AspNetCore.ExceptionHandler
 {
@@ -39,7 +40,7 @@ namespace AspNetCore.ExceptionHandler
             } 
             else
             {
-                var attribute = context.Exception.GetType()
+                var attribute = context.Exception?.GetType()
                     .GetCustomAttributes<StatusCodeAttribute>()
                     .FirstOrDefault();
 
@@ -50,14 +51,13 @@ namespace AspNetCore.ExceptionHandler
             }
 
 
-            if(statusCode != null)
+            if (statusCode == null) return;
+           
+            context.Result = new ObjectResult(message)
             {
-                context.Result = new ObjectResult(message)
-                {
-                    StatusCode = statusCode.Value,
-                };
-                context.ExceptionHandled = true;
-            }
+                StatusCode = statusCode.Value,
+            };
+            context.ExceptionHandled = true;
         }
     }
 }
