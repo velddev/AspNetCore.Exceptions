@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <Authors>velddev</Authors>
     <Description>Use exceptions to return specific errors without having to change the inner service data.</Description>
     <Version>1.1.0</Version>
