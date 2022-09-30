@@ -1,7 +1,6 @@
-﻿namespace AspNetCore.ExceptionHandler
+﻿namespace AspNetCore.ExceptionHandler;
+
+public interface IExplainableException
 {
-    public interface IExplainableException
-    {
-        public object Explain();
-    }
+    public object Explain();
 }

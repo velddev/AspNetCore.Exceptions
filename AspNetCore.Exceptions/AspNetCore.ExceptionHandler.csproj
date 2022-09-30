@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <Authors>velddev</Authors>
-    <Description>Use exceptions to return specific errors without having to change the inner service data.</Description>
-    <Version>1.1.0</Version>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Authors>velddev</Authors>
+        <Description>Use exceptions to return specific errors without having to change the inner service data.</Description>
+        <Version>1.1.0</Version>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <FrameworkReference Include="Microsoft.AspNetCore.App" />
-  </ItemGroup>
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App"/>
+    </ItemGroup>
 
 </Project>

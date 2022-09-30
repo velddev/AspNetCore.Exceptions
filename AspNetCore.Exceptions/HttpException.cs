@@ -1,14 +1,13 @@
 ﻿using System;
 
-namespace AspNetCore.ExceptionHandler
-{
-    public class HttpException : Exception
-    {
-        public int StatusCode { get; }
+namespace AspNetCore.ExceptionHandler;
 
-        public HttpException(int statusCode = 500)
-        {
-            StatusCode = statusCode;
-        }
+public class HttpException : Exception
+{
+    public HttpException(int statusCode = 500)
+    {
+        StatusCode = statusCode;
     }
+
+    public int StatusCode { get; }
 }
